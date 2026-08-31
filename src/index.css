@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  /* Komson Resorts palette — Ajah lagoon-meets-Atlantic */
+  --color-lagoon: #0E5C56;      /* deep teal-green, lagoon at dusk */
+  --color-lagoon-dark: #0A4440;
+  --color-turquoise: #22B4A6;   /* signature bright water */
+  --color-turquoise-light: #6FD3C7;
+  --color-sand: #F0D9A6;        /* warm sand */
+  --color-sand-light: #FAF0DB;
+  --color-coral: #F1663D;       /* Lagos sunset accent, used for CTAs only */
+  --color-ink: #16231F;         /* near-black, green-tinted text */
+  --color-paper: #FBF6EC;       /* warm off-white background */
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Manrope", sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+::selection {
+  background-color: var(--color-coral);
+  color: var(--color-paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
